@@ -1,0 +1,106 @@
+#body-forcast{
+  border-radius: 20px;
+  margin-bottom:100px;
+  font: 11px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+}
+.td-record{
+
+  background-size:auto auto;
+  font-weight:bold;
+  width: auto;
+  height: auto;
+
+}
+.td-record img{
+  width: 165px;
+  height: 100px;
+
+}
+body {
+  
+  
+  
+}
+
+#body-autocomplete {margin-bottom:100px;}
+#body-graph {
+  height:auto;
+  width:auto;
+
+  margin-left:40px;
+
+}
+@media (min-width: 768px){
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */    
+ @media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 178px;
+}
+.image-wrapper .foreground {
+  position: absolute;
+  left: 0;
+  top: 0;    
+  width: 200px;   
+  font-weight:bold;
+}
+
+.image-wrapper .foreground img{
+  width: 100px;
+  height: 80px;
+  margin-top: 5px;
+  margin-left: 30px;
+  
+}
+.image-wrapper .foreground p{
+  
+ margin-left: auto;
+ margin-right: auto;
+ width: 7em
+ 
+}
+
+/*
+.img-responsive {
+max-width:100%;
+height:auto;
+position: relative;
+}
+
+.img-fg {
+position:absolute;
+
+z-index:99;
+left:10px;
+bottom:-50%;
+}*/

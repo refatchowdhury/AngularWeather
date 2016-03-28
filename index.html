@@ -1,0 +1,87 @@
+	<!DOCTYPE html>
+	<html>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<!--For bargraph-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.15/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.5/angular-nvd3.js"></script>
+
+
+
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+	</head>
+
+	<body background='images/bg.jpg'>
+
+		<div ng-app="appWeather" class="container-fluid">
+
+			<div id="body-autocomplete" align="center" ng-controller="autoCompleteLocation">
+
+				<input type="text" ng-model="placeName" class="form-control" id="txtPlaces" value="A new value" onfocus="if(this.value.length>0) this.value='';  placeholder="Enter a location" />
+				<div align="center" id="body-data" >
+					<img ng-src="{{icon}}" />
+					<h1>{{temperature}}</h1>
+					<h4>{{desc}}</h4>
+					<h4>{{location}}</h4>
+					
+				</div>
+				
+			</div>
+			<br>
+			
+			<div id="body-forcast" ng-controller="forecastWeather" style={'border-radius: 20px;'} >
+				<!--
+				<table id='forecast-table' cellspacing="5" cellpadding="5"  width="100%">
+					<tr >
+						<td class='td-record'  align="center" ng-repeat="record in records" 
+						background="images/td-bg1.png">
+						<img ng-src="{{record.icon}}" /><br>
+						
+						{{record.date}}<br>
+						{{record.temperature}}<br>
+						{{record.description}}
+
+					</td>    			
+					
+				</tr>-->
+			</table>
+			<div class="row seven-cols">
+				<div class="col-xs-1 col-md-1" ng-repeat="record in records" >
+					<div class="image-wrapper">
+						<img class="img-responsive" src="images/td-bg1.png" />
+						
+						
+						<div class="foreground">
+							<img class="img-responsive" ng-src="{{record.icon}}" />
+							<p>{{record.date}}<br>
+								{{record.temperature}}<br>
+								{{record.description}}</p>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+
+			</div>
+			
+			<div id="body-graph" ng-controller="graphController">
+				<nvd3 options="options" data="data"></nvd3>
+			</div>
+
+
+		</div>
+		<script src="js/main.js"></script>
+	</body>
+	
+	</html>

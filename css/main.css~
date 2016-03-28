@@ -1,0 +1,33 @@
+#body-forcast{
+border-radius: 20px;
+margin-bottom:100px;
+font: 11px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+
+}
+.td-record{
+
+background-size: 100% 100%;
+font-weight:bold;
+
+}
+.td-record img{
+width: auto;
+height: auto;
+
+}
+body {
+  
+  
+  
+}
+
+#body-autocomplete {margin-bottom:100px;}
+#body-graph {
+height:auto;
+
+
+margin-left:40px;
+
+}
+
